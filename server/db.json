@@ -1,0 +1,48 @@
+{
+  "contacts": [
+    {
+      "id": 3,
+      "name": "jaleel",
+      "email": "jaleel@gmail.com",
+      "phone": "5674839398",
+      "photourl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd6HNBJ9zJKOHVO82xrwGOkfx447uQ0ZbzUA&usqp=CAU",
+      "company": "DEF Company",
+      "title": "software developer",
+      "GroupId": "3"
+    },
+    {
+      "id": 4,
+      "name": "Rehana",
+      "email": "rehana@gmail.com",
+      "phone": "2345789104",
+      "photourl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUoIMBX3z6T8RGumfSvhIczIYtxIbnpJOqTqWevUNqcmJRrjHRSTGscnpMrz6um0mFL7k&usqp=CAU",
+      "company": "GHI Company",
+      "title": "Manager",
+      "GroupId": "1"
+    },
+    {
+      "GroupId": "2",
+      "id": "34",
+      "name": "reena Anshad",
+      "photourl": "https://th.bing.com/th/id/OIP.xWS0pLu7A1EF0EWM2B17vgHaFZ?pid=ImgDet&rs=1",
+      "email": "reeena@gmail.com",
+      "phone": "9747176628",
+      "company": "xyz company",
+      "title": "hr"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "company"
+    },
+    {
+      "id": "2",
+      "name": "Family"
+    },
+    {
+      "id": "3",
+      "name": "Friends"
+    }
+  ]
+}

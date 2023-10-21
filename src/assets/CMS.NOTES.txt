@@ -1,0 +1,185 @@
+CONTACT APP MANAGEMENT
+
+
+1. create a new project - ng new contact-application
+2.run the new project - ng serve --open
+3.clear the code in app.component.html
+4.install 3rd party libraries -bootstrap,fontawesome, googlefonts
+            ->install bootstrap -npm i bootstrap
+            ->configure bootstrap-
+            in angular .json 
+
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ]
+
+            ->In index.html
+             <!--bootstrap-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+            ->install fontawesome
+            npm install --save @fortawesome/fontawesome-free
+            paste link in index,html
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        use google fonts
+
+        5.create html pages or components
+        ->contact manager -view all conatct  -ng g c contactManager
+        ->add contact - ng g c addContact
+        ->view contact -ng g c viewContact
+        edit contact -ng g c editContact
+
+6. setup path for each component - Routing
+        localhost:4200 -> localhost:4200/contactManager
+        inside app-routing.module.ts file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. Create model 
+          -create a model folder in src folder
+          -inside it,create myContact.ts and myGroup.ts file
+
+11.Asynchronous Resolving
+    js                             ts
+    Promise                      observable (rxjs - reactive extension javascript) library 
+    .then()                      .subscribe()
+    .catch()                      .catch()
+
+    display all contact information Api
+    view all contact information Api
+    update all contact information Api
+    delete all contact information Api  
+
+    12.create service 
+    SERVICES - pass data from one component to another component
+                  if different components share the same data then 
+                  we use to create a service
+
+ng g s service-name -> ng g s services/api
+
+
+
+13. to get http methods for api fetching 
+        -import HttpClientModule in app.module.ts
+
+        import {HttpClientModule} from '@angular/common/http';
+
+        import[
+          HttpClientModule
+        ]
+
+14. Dependency injection :
+        data share between two dependent classes 
+        -it perform inside the constructor
+        constructor -> is a special member function
+                    ->it executes first in the class 
+
+        syntax for dependency injection  ->
+                  constructor(access-specifier variable-name : class-name){}
+                  //access specifier -public ,private,protected
+
+15.   ngOnInit 
+            ->it is a lifecycle hook 
+            ->starting stage of a component creation
+16. Data Binding - Data sharing inside a component(ts,html)
+
+        1.one way data binding(ts->html or html to ts)
+            i) component to view(ts->html)
+                  1)string interpolation  --{{variable-name}} (inside in html)
+                  2)property binding -[attribute-name] = "property-name"
+
+        ii)view to component (html to ts)
+                1)event binding -(event-name)="function-name"
+                        ->events are things that happen to html elements.
+                        ->An HTML web page has finished loading
+                        ->An HTML input field was changed
+                        ->An HTML button was clicked
+                        ->onchange	An HTML element has been changed
+                        ->onclick	The user clicks an HTML element
+
+                2)Event binding using $event 
+                
+                 ->$event is used in function arguments
+                 (event-name)="function-name($event)  (html)
+                 ->funcion-name(event) (ts)
+
+                3)two way data binding"
+                        ngModel-> [(ngModel)]="property-name"
+                                ngModel imports in app.module.ts -FormsModule
+                                ->Creates a FormControl instance from a domain 
+                                model and binds it to a form control element.
+                                ->add this into input tag also put name attribute in it
+
+
+17. Directives - to manipulate DOM
+        1) COMPONENT directives
+        2) structural directives
+                *ngIf="condition"
+                *ngFor="let var-name of array-name
+
+18.ActivatedRoute(class)
+
+           Provides access to information about a route associated 
+             with a component that is loaded in an outlet. 
+            Use to traverse the RouterState tree and 
+            extract information from nodes.
+
+        ->parameter
+               params: An observable of the matrix parameters scoped to this route.
+
+19. Transforming data using pipes
+        ->pipes are simple function to use in template expressions 
+        to accept an input value and return a transformed value.
+        ->Angular provides built-in pipes for typical data transformations
+        eg:Datapipe - formats a date value according to locale rules.
+        uppercasepipe - transform text to all upper case characters
+
+        ->create a pipe -ng g p pipes/filter
+
+
+
+
+    
+
